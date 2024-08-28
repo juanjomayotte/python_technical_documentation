@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <nav id="navbar">
+        <header><h2>Python Programming</h2></header>
+        <ul>
+          <li><a class="nav-link" href="#introduction_to_python">Introduction to Python</a></li>
+          <li><a class="nav-link" href="#working_with_data_types_and_variables">Working with Data Types and Variables</a></li>
+          <li><a class="nav-link" href="#control_structures_and_functions">Control Structures and Functions</a></li>
+          <li><a class="nav-link" href="#object_oriented_programming_in_python">Object Oriented Programming in Python</a></li>
+          <li><a class="nav-link" href="#python_libraries_and_frameworks">Python Libraries and Frameworks</a></li>
+          <li><a class="nav-link" href="#key_concepts_recap">Key Concepts Recap</a></li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <h1>Python Programming: A Technical Overview</h1>
+        <section class="main-section" id="introduction_to_python">
+          <header><h2>Introduction to Python</h2></header>
+          <p>Python is a high-level, interpreted programming language known for its readability and simplicity. Created by Guido van Rossum and first released in 1991, Python emphasizes code readability with its use of significant indentation. It is an incredibly versatile language, used for a wide range of applications from web development to scientific computing, data analysis, artificial intelligence, and more.</p>
+          <p>Python’s simplicity makes it an excellent choice for beginners, while its powerful libraries and frameworks make it indispensable for professionals. The language supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its extensive standard library and the availability of third-party packages allow developers to implement complex functionalities efficiently.</p>
+            <div class="code-block">
+            <pre>
+              <code>
+# A simple Python program to print "Hello, World!"
+print("Hello, World!")
+              </code>
+            </pre>
+          </div>
+          <p>Python is dynamically typed, meaning variables do not need to be declared with a specific type, and the interpreter infers the type at runtime. It also manages memory automatically, which reduces the risk of memory leaks and segmentation faults.</p>
+        </section>
+        <section class="main-section" id="working_with_data_types_and_variables">
+          <header><h2>Working with Data Types and Variables</h2></header>
+          <p>Python supports a wide range of data types, including integers, floats, strings, lists, tuples, sets, and dictionaries. Each data type serves different purposes and is optimized for different operations.</p>
+          <ul>
+            <li><b>Integers and Floats:</b> Python handles integers of arbitrary precision, and floats are implemented using double precision.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Integer and float examples
+x = 10   # integer
+y = 3.14 # float
+              </code>
+            </pre>
+          </div>
+            <li><b>Strings:</b> Strings in Python are immutable sequences of characters. They support various operations like concatenation, slicing, and formatting.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# String manipulation
+name = "Python"
+greeting = "Hello, " + name
+              </code>
+            </pre>
+            </div>
+            <li><b>Lists and Tuples:</b> Lists are mutable sequences, while tuples are immutable. Both can store heterogeneous data types.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# List and tuple examples
+fruits = ["apple", "banana", "cherry"]  # list
+coordinates = (10, 20)                  # tuple
+              </code>
+            </pre>
+            </div>
+            <li><b>Dictionaries:</b> Dictionaries are unordered collections of key-value pairs, which are useful for storing related data.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Dictionary example
+person = {"name": "Alice", "age": 25}
+              </code>
+            </pre>
+            </div>
+          </ul>
+            <p>Understanding these fundamental data types and their behaviors is crucial for writing efficient Python programs.</p>
+        </section>
+        <section class="main-section" id="control_structures_and_functions">
+          <header><h2>Control Structures and Functions</h2></header>
+          <p>Python provides several control structures for directing the flow of a program. These include conditional statements, loops, and functions.</p>
+          <ul>
+            <li><b>Conditional Statements:</b> Python supports <i>if</i>, <i>elif</i>, and <i>else</i> for decision-making.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Conditional statement example
+if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+else:
+    print("Zero")
+              </code>
+            </pre>
+            </div>
+            <li><b>Loops:</b> <i>for</i> and <i>while</i> loops are used to iterate over sequences or execute a block of code multiple times.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Loop example
+for i in range(5):
+    print(i)
+              </code>
+            </pre>
+            </div>
+            <li><b>Functions:</b> Functions in Python are defined using the <i>def</i> keyword and are used to encapsulate code for reuse.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Function example
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+              </code>
+            </pre>
+            </div>
+          </ul>
+            <p>Functions can return values, accept parameters, and even be passed as arguments to other functions, making them a powerful feature for organizing code.</p>
+        </section>
+        <section class="main-section" id="object_oriented_programming_in_python">
+          <header><h2>Object Oriented Programming in Python</h2></header>
+          <p>Python supports object-oriented programming (OOP), which is a paradigm based on the concept of "objects," which can contain data and code to manipulate that data.</p>
+          <ul>
+            <li><b>Classes and Objects:</b> Classes are blueprints for creating objects (instances). Objects are instances of classes.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Class and object example
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        print(f"{self.name} says Woof!")
+
+my_dog = Dog("Rex", "German Shepherd")
+my_dog.bark()+
+              </code>
+            </pre>
+            </div>
+            <li><b>Inheritance:</b> Python allows classes to inherit attributes and methods from other classes, promoting code reuse.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Inheritance example
+class Animal:
+    def eat(self):
+        print("Eating")
+
+class Cat(Animal):
+    def meow(self):
+        print("Meow")
+
+my_cat = Cat()
+my_cat.eat()
+my_cat.meow()
+              </code>
+            </pre>
+            </div>
+            <li><b>Polymorphism:</b> Polymorphism allows functions to operate on objects of different classes as long as they follow a common interface.</li>
+          </ul>
+            <p>Understanding OOP in Python is key to creating modular, reusable, and maintainable code, especially in large projects.</p>
+        </section>
+        <section class="main-section" id="python_libraries_and_frameworks">
+          <header><h2>Python Libraries and Frameworks</h2></header>
+          <p>Python’s extensive standard library and third-party libraries make it incredibly powerful for various domains.</p>
+          <ul>
+            <li><b>Standard Library:</b>: The Python Standard Library includes modules for file I/O, system calls, sockets, and more, allowing developers to perform a wide range of tasks without needing external libraries.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Using the datetime module from the standard library
+import datetime
+
+current_time = datetime.datetime.now()
+print(current_time)
+              </code>
+            </pre>
+            </div>
+            <li><b>Third-Party Libraries:</b> Python has a rich ecosystem of third-party libraries for specialized tasks. For instance, NumPy and Pandas are essential for data analysis, while Django and Flask are popular for web development.</li>
+            <div class="code-block">
+            <pre>
+              <code>
+# Using the NumPy library for numerical operations
+import numpy as np
+
+array = np.array([1, 2, 3, 4])
+print(array * 2)
+              </code>
+            </pre>
+            </div>
+            <li><b>Frameworks:</b> Python frameworks like Django, Flask, and FastAPI provide the scaffolding needed to build web applications quickly and securely.</li>
+          </ul>
+          <p>Exploring and mastering these libraries and frameworks is crucial for leveraging Python’s full potential in various fields.</p>
+        </section>
+        <section class="main-section" id="key_concepts_recap">
+          <header><h2>Key Concepts Recap</h2></header>
+          <ul>
+            <li>Python is a versatile, high-level programming language ideal for both beginners and professionals.</li>
+            <li>Python supports multiple data types such as integers, strings, lists, and dictionaries.</li>
+            <li>Control structures like loops and conditionals help direct the flow of a program, while functions promote code reuse.</li>
+            <li>Python’s object-oriented features enable modular and maintainable code through classes, inheritance, and polymorphism.</li>
+            <li>Python’s standard library and third-party packages extend its capabilities for numerous applications, from data science to web development.</li>
+          </ul>
+        </section>
+      </main>
+      <footer>Made with love by Juan José Mayotte.</footer>
+    </body>
+  </html>
